@@ -20,6 +20,8 @@ export default function Home() {
         </section>
       </main>
 
+      <CardItem />
+
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -32,7 +34,6 @@ export default function Home() {
           </span>
         </a>
       </footer>
-      <CardItem />
     </div>
   );
 }

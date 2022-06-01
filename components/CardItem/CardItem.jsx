@@ -1,6 +1,6 @@
 import style from "./index.module.scss"
 
-export default function CardItem () {
+export default function CardItem (title, description) {
 return (
 <>
 
