@@ -1,5 +1,5 @@
 
-import { Map } from "react-map-gl";
+import { Map, GeolocateControl } from "react-map-gl";
 
 function MapBox() {
     return <Map
@@ -12,6 +12,7 @@ function MapBox() {
             zoom: 3
         }}
     >
+        <GeolocateControl />
     </Map>
 }
 
