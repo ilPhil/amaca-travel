@@ -9,15 +9,14 @@ import { getCities } from "../utils/fetch";
 export default function Home() {
   return (
     <div className={styles.container}>
+ <Hero />
+   <CardItem />
+
       <main className={styles.main}>
         <section>
           <Map />
         </section>
       </main>
-
-      <Hero />
-      <PixelHero />
-      <CardItem />
 
       <footer className={styles.footer}>
         <a
