@@ -15,6 +15,7 @@
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
     "mapbox-gl": "^2.8.2",
+    "module": "^1.2.5",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-map-gl": "^7.0.15",

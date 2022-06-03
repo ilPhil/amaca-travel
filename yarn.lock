@@ -72,6 +72,14 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.1.1"
 
+"@gulp-sourcemaps/map-sources@1.X":
+  "integrity" "sha512-o/EatdaGt8+x2qpb0vFLC/2Gug/xYPRXb6a+ET1wGYKozKN3krDWC/zZFZAtrzxJHuDL12mwdfEFKcKMNvc55A=="
+  "resolved" "https://registry.npmjs.org/@gulp-sourcemaps/map-sources/-/map-sources-1.0.0.tgz"
+  "version" "1.0.0"
+  dependencies:
+    "normalize-path" "^2.0.1"
+    "through2" "^2.0.3"
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.9.5.tgz"
