@@ -1,5 +1,4 @@
 import Hero from "../components/Hero";
-import PixelHero from '../components/PixelHero'
 import Image from "next/image";
 import Map from "../components/Map";
 import CardItem from "../components/CardItem/CardItem";
@@ -9,7 +8,7 @@ import { getCities } from "../utils/fetch";
 export default function Home() {
   return (
     <div className={styles.container}>
- <Hero />
+  <Hero />
    <CardItem />
 
       <main className={styles.main}>
