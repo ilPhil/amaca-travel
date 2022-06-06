@@ -10,13 +10,23 @@ const Hero = () => {
   const leftBtn = useRef();
   const imageEl = useRef();
 
-  const images = [
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--1-min-min.jpg",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--2-min-min.jpg",
-    "https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg",
-  ];
+  const images = [{
+    title:"Amsterdam",
+    src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--1-min-min.jpg",
+    currentIndex: 1,
+  },
+  {
+    title:"Roma",
+    src:"https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--2-min-min.jpg",
+    currentIndex: 2,
+  },
+  {
+    title:"Praga",
+    src:"https://s3-us-west-2.amazonaws.com/s.cdpn.io/537051/city--5-min-min.jpg",
+    currentIndex: 3,
+  }];
 
-  
+
   const imgSwipe = (e) => {
     setFade(true);
 
@@ -35,31 +45,43 @@ const Hero = () => {
     }, 100);
   };
 
+
+ 
+
   return (
     <div className={styles.wrapper}>
-      <div
+    <div
         className={`${styles.wrapper__hero} ${isFade && styles.fade}`}
-        ref={imageEl}
-      >
+        ref={imageEl}>
+
+        <ul className={styles.wrapper__text}>
+        {images && images.map((item, index) => {
+          if (imgPos === index) 
+          {
+            return <li className={styles.wrapper__title} key={index}> {item.title} </li>
+            }
+          }
+          )}
+          </ul>
+
         <Image
           className={styles.wrapper__image}
           src={images[imgPos]}
           layout="fill"
         />
-      
-
+    
       <div className={styles.wrapper__btnleft}>
-        <button ref={leftBtn} onClick={imgSwipe}>
+        <button ref={leftBtn} onClick={imgSwipe} >
           {"<"}
         </button>
-        </div>
+      </div>
 
         <div className={styles.wrapper__btnright}>
         <button ref={rightBtn} onClick={imgSwipe}>
           {">"}
         </button>
       </div>
-      </div>
+    </div>
     </div>
   );
 };
