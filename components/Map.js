@@ -43,8 +43,8 @@ function MapBox({ getCities }) {
           zoom: 1,
         }}
       >
-        {database &&
-          database.map((city) => (
+        {
+          database?.map((city) => (
             <Marker
               key={city.id}
               longitude={city.longitude}
