@@ -1,21 +1,40 @@
+.map_container {
+    display: flex;
+    gap: 0.5vw;
+    box-shadow: 10px 10px 8px #888888;
 
-// .marker:hover {
-//     width: 2vw;
-//     height: 4vh;
-//     border-radius: 30px;
 
-//     &:hover {
-//     width: 8vw;
-//     height: 16vh;
-//     border-radius: 100px;
-//     }
-// }
+    .map_card {
+        display: flex;
+        flex-direction: column;
+        max-width: 10vw;
+        max-height: 50vh;
+        overflow: auto;
+        border-radius: 20px 0 0 20px;
+        background-color: rgb(184, 242, 242);
+        box-shadow: 10px 10px 8px #888888;
+
+        .card_poster {
+            width: 100%;
+            height: auto;
+        }
+
+        .card_info {
+            text-align: center;
+            font-size: 1vw;
+
+            .card_info_name {
+                cursor: pointer;
+            }
+        }
+    }
+}
 
 .pinner {
-    font-size: 2.5vw;
+    width: 1.5vw;
     cursor: pointer;
 
     &:hover {
-        font-size: 3.5vw;
+        width: 1.8vw;
     }
 }
