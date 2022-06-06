@@ -13,7 +13,7 @@ export default function Home() {
       <CardItem />
       <main className={styles.main}>
         <section>
-          <Map />
+          <Map getCities={getCities} />
         </section>
       </main>
       <Footer />

@@ -1,18 +1,23 @@
-// import MapCard from "./MapCard/MapCard";
-import * as React from "react";
+import { useState, useEffect } from "react";
 import { Map, GeolocateControl, Marker, Popup } from "react-map-gl";
-import { getCities } from "../utils/fetch";
+// import { getCities } from '../utils/fetch';
+import style from "../styles/map.module.scss";
 
-function MapBox() {
-  const [showPopup, setShowPopup] = React.useState(true);
-  // const data = getCities();
-  const [coordinates, setCoordinates] = React.useState([]);
-  // const { latitude, longitude } = data;
-  // const latitude = data.latitude;
-  // const longitude = data.longitude;
-  React.useEffect(() => {
-    getCities().then((data) => setCoordinates(data));
+function MapBox({ getCities }) {
+  // const [showPopup, setShowPopup] = useState();
+  // const [value, setValue] = React.useState();
+  const [database, setDatabase] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState({}); // obtaining city object with click on marker
+
+  // GET DATA EVENT
+  useEffect(() => {
+    getCities().then((city) => setDatabase(city));
   }, []);
+  console.log(selectedLocation.id);
+  // React.useEffect(() => {
+  //     // devo ottenere all'hover l'id del marker e
+  //     // passare la foto o ad un altro marker o ad un popup
+  // }, [value]) //in teoria si attiva al cambio state di value
 
   return (
     <Map
@@ -22,21 +27,29 @@ function MapBox() {
       initialViewState={{
         longitude: -100,
         latitude: 40,
-        zoom: 4,
+        zoom: 1,
       }}
     >
-      {coordinates &&
-        coordinates.map((city) => (
+      {database &&
+        database.map((city) => (
           <Marker
             key={city.id}
             longitude={city.longitude}
             latitude={city.latitude}
             anchor={"top"}
-          ></Marker>
+          >
+            {/* <img className={style.marker} src={city.cover_image_url} /> */}
+            <p
+              onClick={() => setSelectedLocation(city)}
+              className={style.pinner}
+            >
+              📍
+            </p>
+          </Marker>
         ))}
-      {/* {showPopup && (
-            <Popup longitude={-100} latitude={40} anchor="top" onClose={() => setShowPopup(false)}>Gran festa</Popup>
-        )} */}
+      {/* {selectedLocation.id === database.id ? <Popup longitude={data.longitude} latitude={data.latitude} anchor="top">
+            {data.name}    when I take the data with click I need to pass them to the popup; HOW?
+        </Popup> : false }      */}
 
       <GeolocateControl />
     </Map>
