@@ -33,7 +33,7 @@ export default ({children}) => {
     const fetchAllCities = async () => {
       dispatch({type: FETCH_ALL_CITIES_REQUEST})
       try {
-          const {data: cities} = await axios.get("https://api.musement.com/api/v3/cities")
+          const {data: cities} = await axios.get("https://api.musement.com/api/v3/cities/")
           dispatch({type: FETCH_ALL_CITIES_SUCCESS, payload: cities})
       } catch (e) {
           dispatch({type: FETCH_ALL_CITIES_ERROR, payload: e})
@@ -43,7 +43,7 @@ export default ({children}) => {
     const fetchAllActivitiess = async () => {
         dispatch({type: FETCH_ALL_ACTIVITIES_REQUEST})
         try {
-            const {data: activities} = await axios.get("https://api.musement.com/api/v3/activities/{activityUuid}")
+            const {data: activities} = await axios.get("https://api.musement.com/api/v3/activities/")
             dispatch({type: FETCH_ALL_ACTIVITIES_SUCCESS, payload: activities})
         } catch (e) {
             dispatch({type: FETCH_ALL_ACTIVITIES_ERROR, payload: e})
@@ -53,7 +53,7 @@ export default ({children}) => {
     const addActivities = async (activity) => {
         dispatch({type: ADD_ACTIVITIES_REQUEST})
         try {
-            const {data} = await axios.post('https://api.musement.com/api/v3/activities/{activityUuid}', activity)
+            const {data} = await axios.post('https://api.musement.com/api/v3/activities/', activity)
             dispatch({type: ADD_ACTIVITIES_SUCCESS, payload: data})
         } catch (e) {
             dispatch({type: ADD_ACTIVITIES_ERROR, payload: e})
