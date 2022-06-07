@@ -8,15 +8,15 @@ import Footer from "../components/Footer/index.js";
 
 export default function Home() {
   return (
-  <div className={styles.container}>
-    <Hero />
-    <CardItem />
-    <main className={styles.main}>
-      <section>
-        <Map />
-      </section>
-    </main>
-    <Footer />
-  </div>
+    <div className={styles.container}>
+      <Hero />
+      <CardItem />
+      <main className={styles.main}>
+        <section>
+          <Map getCities={getCities} />
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
