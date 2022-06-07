@@ -22,8 +22,7 @@
       transition: all 0.50s;
     }
 
-   
-  
+
     &__btnleft {
       position:absolute;
       top: 50%;  
@@ -42,16 +41,17 @@
       flex-direction: row;
       gap: 10px;
       z-index: 1;
+      transform: rotate(180deg);
     }
   
     button {
       margin: 20px;
       cursor: pointer;
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.486);
-      border-radius: 50%;
-      opacity: 0.9;
+      width: 70px;
+      height: 70px;
+      background: rgba(255, 255, 255, 0.945);
+      border: transparent;
+      transform: rotate(90deg);
     }
   
     .fade {
@@ -69,9 +69,7 @@
       background-color: black;
       transition: all 3s 1s;
     }
-  
 
-
-  }
+}
   
   
