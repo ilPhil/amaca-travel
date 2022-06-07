@@ -72,13 +72,13 @@ const Hero = () => {
     
       <div className={styles.wrapper__btnleft}>
         <button ref={leftBtn} onClick={imgSwipe} >
-          {"<"}
+          <img src="https://cdn.onlinewebfonts.com/svg/img_92555.svg" alt="Arrow Icon"></img>
         </button>
       </div>
 
         <div className={styles.wrapper__btnright}>
         <button ref={rightBtn} onClick={imgSwipe}>
-          {">"}
+          <img src="https://cdn.onlinewebfonts.com/svg/img_92555.svg" alt="Arrow Icon"></img>
         </button>
       </div>
     </div>
