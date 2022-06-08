@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 
 export default function CardItem(title, description) {
   const [activity, setActivity] = useState([]);
-  //const activities = getActivities().data
+
   useEffect(() => {
-    getActivities().then((act) => setActivity(act));
+    getActivities().then((act) => setActivity(act.data));
   }, []);
 
-  const data = activity.data;
+  console.log(activity, "ACTIVITY");
 
   const formatContentText = (content) => {
     const textArr = content && content.split(" ");
@@ -19,8 +19,8 @@ export default function CardItem(title, description) {
   return (
     <div className={style.cardsWrapper}>
       {/* {console.log(data)} */}
-      {data &&
-        data.map((actList) => (
+      {activity &&
+        activity.map((actList) => (
           <div className={style.card} key={actList.uuid}>
             <div>
               <img className={style.poster} src={actList.cover_image_url} />
