@@ -1,7 +1,7 @@
 import React from "react";
-// import { FaFacebookF } from "react-icons/fa";
-// import { FaLinkedinIn } from "react-icons/fa";
-// import { FiMail } from "react-icons/fi";
+import { FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 
 const Footer = () => {
     return ( 
@@ -25,7 +25,8 @@ const Footer = () => {
                         <li><a href="#">Visita Teatro Massimo</a></li>
                         <li><a href="#">Visita alla Camorra</a></li>
                     </ul>
-                </div><div className="footer-col">
+                </div>
+                <div className="footer-col">
                     <h4>Top Città</h4>
                     <ul>
                         <li><a href="#">Milano</a></li>
@@ -36,11 +37,11 @@ const Footer = () => {
                 </div>
                 <div className="footer-col">
                     <h4>Contact us</h4>
-                    {/* <div className="social-links">
+                    <div className="social-links">
                         <a href="#"><FaFacebookF /></a>
                         <a href="#"><FaLinkedinIn /></a>
                         <a href="#"><FiMail /></a>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </div>
