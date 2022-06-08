@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 body {
   line-height: 1.5;
-  font-family: 'Poppins', sans-serif;;
+  font-family: "Poppins", sans-serif, "VT323", monospace, "Press Start 2P",
+    cursive;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +14,7 @@ body {
 
 .container {
   max-width: 1170px;
-  
+
   margin: auto;
 }
 
@@ -46,7 +48,7 @@ ul {
 }
 
 .footer-col h4::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -60,7 +62,7 @@ ul {
   margin-bottom: 10px;
 }
 
-.footer-col ul li a{
+.footer-col ul li a {
   font-size: 16px;
   text-transform: capitalize;
   color: #ffffff;
@@ -71,7 +73,7 @@ ul {
   transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover{
+.footer-col ul li a:hover {
   color: #ffffff;
   padding-left: 8px;
 }
@@ -86,7 +88,7 @@ ul {
   line-height: 40px;
   border-radius: 50%;
   color: #ffffff;
-  transition:  all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover {
@@ -94,25 +96,20 @@ ul {
   background-color: white;
 }
 
-.final-txt{
+.final-txt {
   text-align: center;
   padding: 20px 70px;
 }
 
-@media(max-width: 767px){
+@media (max-width: 767px) {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
   }
 }
 
-@media(max-width: 574px){
+@media (max-width: 574px) {
   .footer-col {
     width: 100%;
   }
 }
-
-
-
-
-
