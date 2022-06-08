@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Map, GeolocateControl, Marker, Popup } from "react-map-gl";
+import { Map, GeolocateControl, Marker } from "react-map-gl";
 import style from "../styles/map.module.scss";
 
 function MapBox({ getCities }) {
@@ -10,7 +10,6 @@ function MapBox({ getCities }) {
   useEffect(() => {
     getCities().then((city) => setDatabase(city));
   }, []);
-  console.log(selectedLocation.id);
 
   return (
     <div className={style.map_container}>
@@ -43,21 +42,20 @@ function MapBox({ getCities }) {
           zoom: 1,
         }}
       >
-        {
-          database?.map((city) => (
-            <Marker
-              key={city.id}
-              longitude={city.longitude}
-              latitude={city.latitude}
-              anchor={"center"}
-            >
-              <img
-                onClick={() => setSelectedLocation(city)}
-                className={style.pinner}
-                src="/Map-Pin.svg"
-              />
-            </Marker>
-          ))}
+        {database?.map((city) => (
+          <Marker
+            key={city.id}
+            longitude={city.longitude}
+            latitude={city.latitude}
+            anchor={"center"}
+          >
+            <img
+              onClick={() => setSelectedLocation(city)}
+              className={style.pinner}
+              src="/Map-Pin.svg"
+            />
+          </Marker>
+        ))}
         <GeolocateControl />
       </Map>
     </div>
