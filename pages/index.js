@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import Image from "next/image";
-import Map from "../components/Map";
+// import Map from "../components/Map";
 import CardItem from "../components/CardItem/CardItem";
 import styles from "../styles/Home.module.css";
 import { getCities } from "../utils/fetch";
@@ -22,9 +22,9 @@ export default function Home() {
       <Hero />
       <CardItem />
       <main className={styles.main}>
-        <section>
+        {/* <section>
           <Map getCities={getCities} />
-        </section>
+        </section> */}
       </main>
       <Footer />
     </div>

@@ -13,7 +13,7 @@ export default function Activity() {
         <div className={styles.wrapper}> Activity Page 
 
           <Link href="/">
-            <a> ------> Home</a>
+            <a> Home</a>
           </Link> 
             <div>     
               <h1>Activity Component Title </h1>
