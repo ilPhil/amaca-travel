@@ -10,8 +10,6 @@ const Hero = () => {
   const leftBtn = useRef();
   const imageEl = useRef();
 
-  console.log(imgPos);
-
   const images = [
     {
       title: "Amsterdam",
