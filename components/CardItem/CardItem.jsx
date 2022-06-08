@@ -1,19 +1,28 @@
-import style from "./index.module.scss"
+import style from "./index.module.scss";
+import { getActivities } from "../../utils/fetch";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+export default function CardItem() {
+  const [activity, setActivity] = useState([]);
+  useEffect(() => {
+    getActivities().then((act) => setActivity(act.data));
+  }, []);
 
-export default function CardItem (title, description) {
-return (
-<>
-
-<main>
-  <div className={style.card}>
-  <img className={style.poster} src="https://www.ansa.it/webimages/ch_620x438/2021/7/22/2950c469bbc8283c68201209f13dd924.jpg"/>
-    <div className={style.info}>
-      <h1 className={style.title}>Title</h1>
-      <p className={style.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse corporis, velit porro impedit laudantium accusamus! Id velit, illum magni rem mollitia blanditiis iste maiores optio ipsa, est dolorem fugit</p>
+  return (
+    <div className={style.cardsWrapper}>
+      {activity?.map(({ uuid, cover_image_url, title, about }) => (
+        <Link href={`activity/${uuid}`} key={uuid}>
+          <div className={style.card}>
+            <div>
+              <img className={style.poster} src={cover_image_url} />
+              <div className={style.container}>
+                <h4 className={style.title}>{title.substring(0, 20)}</h4>
+                <p className={style.description}>{about.substring(0, 50)}</p>
+              </div>
+            </div>
+          </div>
+        </Link>
+      ))}
     </div>
-  </div>
-</main>
-</>
-
-)
+  );
 }

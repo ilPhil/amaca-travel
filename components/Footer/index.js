@@ -1,4 +1,5 @@
 import React from "react";
+
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
@@ -46,7 +47,7 @@ const Footer = () => {
         </div>
         <br />
         <br />
-        <p className="final-txt">Made by green team! | 2022</p>
+        <p className="final-txt">Made by Green Team! | 2022</p>
         
     </footer>
     )
