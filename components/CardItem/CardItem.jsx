@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 export default function CardItem() {
   const [activity, setActivity] = useState([]);
-
   useEffect(() => {
     getActivities().then((act) => setActivity(act.data));
   }, []);
+
   return (
     <div className={style.cardsWrapper}>
       {activity?.map(({ uuid, cover_image_url, title, about }) => (
