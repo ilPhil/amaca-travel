@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  cursor: pointer;
 }
 
 .card {
@@ -31,4 +32,8 @@
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+}
+
+.info {
+  color: rgb(89, 184, 137);
 }
