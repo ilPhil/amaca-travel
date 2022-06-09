@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         <br />
         <br />
-        <p className="final-txt">Made by Green Team! | 2022</p>
+        <p className="final-txt">Made by green team! | 2022</p>
         
     </footer>
     )
