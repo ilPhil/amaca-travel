@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Map, GeolocateControl, Marker } from "react-map-gl";
+import Link from "next/link";
+
 import style from "../styles/map.module.scss";
 
 function MapBox({ getCities }) {
@@ -14,7 +16,7 @@ function MapBox({ getCities }) {
   return (
     <div className={style.map_container}>
       {/* MAP SIDE CARD */}
-      <div className={style.map_card}>
+      <div className={style.map_card} id={selectedLocation.id || 0}>
         <img
           className={style.card_poster}
           src={
@@ -23,9 +25,11 @@ function MapBox({ getCities }) {
           }
         />
         <div className={style.card_info}>
-          <h1 className={style.card_info_name}>
-            {selectedLocation.name || "Roma"}
-          </h1>
+          <Link href={`city/${selectedLocation.uuid}` || "#"} key={selectedLocation.uuid || 0}>
+            <h1 className={style.card_info_name}>
+              {selectedLocation.name || "Roma"}
+            </h1>
+          </Link>  
           <p className={style.card_info_description}>
             {selectedLocation.meta_description || "Scopri le attività"}
           </p>
