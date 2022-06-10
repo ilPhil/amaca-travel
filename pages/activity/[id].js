@@ -16,16 +16,19 @@ export default function Id() {
   const { about, title, cover_image_url } = activityData;
 
   return (
-    <div className={styles.wrapper}>
-    <Header/>
+    <div className={styles.flex}>
+      <div className={styles.wrapper}>
+      <Header/>
       <div>
-        <img className={styles.wrapperimg} src={cover_image_url}></img>
-      </div>
-      <div className={styles.wrappertitle}>{title}</div>
-      <br></br>
-      <div className={styles.wrapper__desc}>{about}</div>
+          <img className={styles.wrapper__img} src={cover_image_url}></img>
+        </div>
+        <div className={styles.wrappertitle}>{title}</div>
+        <br></br>
+        <div className={styles.wrapper__desc}>{about}</div>
 
-      <Footer/>
+        <Footer/>
+      </div>
     </div>
+    
   );
 }
