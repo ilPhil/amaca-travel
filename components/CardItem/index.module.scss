@@ -11,9 +11,13 @@
   /* Add shadows to create the "card" effect */
   display: flex;
   width:20%;
-
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  border-radius: 40px 40px 40px 0;
+
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 170px;
 
   &__.description {
     font-size: 5vw;
@@ -23,17 +27,46 @@
 
 .poster {
   width: 100%;
+  //height: 210px;
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 170px;
+  max-height: 170px;
+  object-fit: cover;
+  
+  cursor: pointer;
+  border-radius: 40px 40px 0px 0px;
 }
+
+.poster:hover {
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.1);
+  box-shadow: rgba(22, 201, 232, 0.4) 0px 5px, rgba(46, 237, 240, 0.3) 0px 10px, rgba(46, 208, 240, 0.2) 0px 15px, rgba(53, 46, 240, 0.1) 0px 20px, rgba(111, 46, 240, 0.05) 0px 25px;
+  //box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+  cursor: text;
 }
 
 .info {
-  color: rgb(89, 184, 137);
+  //color: rgb(89, 184, 137);
+  color: rgb(29, 138, 240);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .9rem;
+  padding: 15px;
+  
+}
+
+.info:hover {
+  transition: 0.9s;
+  color: black;
 }

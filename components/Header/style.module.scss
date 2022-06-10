@@ -1,18 +1,48 @@
   .box{
-    box-shadow: 2px;
+    //box-shadow: 2px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+    //justify-content: center;
+    //align-items: center;
+    //background: #f7f7f7;
+    
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: hsla(0,0%,9%,.7607843137254902);
+    //-webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    //-webkit-transition: .6s;
+    transition: .6s;
+    color: #f7f7f7;
+    z-index: 9;
+    padding: 5px 0;
   }
     
     
   .text{
     font-size: 20px;
-    color: black;
+    color: rgb(255, 255, 255);
       
     width: 70px;
     text-align: center;
       
+  }
+  .shop {
+    
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    padding: 5px 0
+  }
+
+  .shop:hover{
+    color: aqua;
   }

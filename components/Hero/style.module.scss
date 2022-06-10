@@ -5,6 +5,18 @@
   align-items: flex-start;
   gap: 20px;
   margin-bottom: 40px;
+  
+
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  background-position: 50%;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-transition: all .9s linear;
+  transition: all .9s linear;
+  margin: 2;
+  filter: contrast(1.2) brightness(80%)
 
   &__image {
     width: 100vw;

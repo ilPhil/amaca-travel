@@ -18,7 +18,8 @@ const Footer = () => {
                         <li><a href="https://www.linkedin.com/in/alessandro-la-greca-336278239/">Alessandro La Greca</a></li>
                         <li><a href="https://www.linkedin.com/in/trovatoantonello/">Antonello Trovato</a></li>
                     </ul>
-                </div><div className="footer-col">
+                </div>
+                <div className="footer-col">
                     <h4>Top Attività</h4>
                     <ul>
                         <li><a href="#">Visita duomo Milano</a></li>
@@ -26,7 +27,8 @@ const Footer = () => {
                         <li><a href="#">Visita Teatro Massimo</a></li>
                         <li><a href="#">Visita alla Camorra</a></li>
                     </ul>
-                </div><div className="footer-col">
+                </div>
+                <div className="footer-col">
                     <h4>Top Città</h4>
                     <ul>
                         <li><a href="#">Milano</a></li>
