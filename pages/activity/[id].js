@@ -10,22 +10,15 @@ export default function Id({data}) {
 
   const router = useRouter();
   const [activityData, setActivityData] = useState([]);
-  const [price, setPrice] = useState([])
+
 
   useEffect(() => {
     getActivities(router.query.id).then((act) => setActivityData(act));
-  }, []);
-//   console.log(activityData)
-  useEffect(() => {
-    getActivities(router.query.id).then((price) => setPrice(price.retail_price.formatted_value))
-  }, [activityData])
+  }, [router]);
 
-  
-  console.log(price)
-  const { about, title, cover_image_url } = activityData;
 
-  // const price = activityData.retail_price.formatted_value;
-
+//   console.log(price)
+  const { about, title, cover_image_url, retail_price  } = activityData;
 
   return (
     <div>
@@ -38,7 +31,7 @@ export default function Id({data}) {
         <div className={styles.wrappertitle}> {title} </div>
 
         <div className={styles.wrapperdesc}> {about} </div>
-    <div className={styles.wrapperprice}> Prezzo {price} </div>
+    <div className={styles.wrapperprice}> Prezzo {retail_price?.formatted_value} </div>
         <button className={styles.wrapper__btn}>Acquista</button>
 
         </div>
