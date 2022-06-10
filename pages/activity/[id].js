@@ -7,17 +7,13 @@ import Header from "../../components/Header";
 
 export default function Id({data}) {
 
-
   const router = useRouter();
   const [activityData, setActivityData] = useState([]);
-
 
   useEffect(() => {
     getActivities(router.query.id).then((act) => setActivityData(act));
   }, [router]);
 
-
-//   console.log(price)
   const { about, title, cover_image_url, retail_price  } = activityData;
 
   return (
@@ -25,20 +21,18 @@ export default function Id({data}) {
     <Header/>
 
     <div className={styles.wrapper}>
-
         <img src={cover_image_url}/>
-
         <div className={styles.wrappertitle}> {title} </div>
-
         <div className={styles.wrapperdesc}> {about} </div>
-    <div className={styles.wrapperprice}> Prezzo {retail_price?.formatted_value} </div>
+        <div className={styles.wrapperprice}> Prezzo {retail_price?.formatted_value} </div>
         <button className={styles.wrapper__btn}>Acquista</button>
 
-        </div>
+    </div>
 
     <Footer/>
 
     </div>
+
 
   );
 

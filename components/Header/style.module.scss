@@ -1,18 +1,25 @@
   .box{
-    box-shadow: 2px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     background-color: white;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
   }
     
     
   .text{
-    font-size: 20px;
+    font-size: 30px;
     color: black;
-      
-    width: 70px;
+    width: 230px;
     text-align: center;
       
+  }
+
+  .links{
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 10px;
   }
