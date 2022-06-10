@@ -5,30 +5,35 @@ import Footer from "../../components/Footer";
 import styles from "./style.module.scss";
 import Header from "../../components/Header";
 
-export default function Id() {
+export default function Id({data}) {
+
   const router = useRouter();
   const [activityData, setActivityData] = useState([]);
 
   useEffect(() => {
     getActivities(router.query.id).then((act) => setActivityData(act));
-  }, []);
+  }, [router]);
 
-  const { about, title, cover_image_url } = activityData;
+  const { about, title, cover_image_url, retail_price  } = activityData;
 
   return (
-    <div className={styles.flex}>
-      <div className={styles.wrapper}>
-      <Header/>
-      <div>
-          <img className={styles.wrapper__img} src={cover_image_url}></img>
-        </div>
-        <div className={styles.wrappertitle}>{title}</div>
-        <br></br>
-        <div className={styles.wrapper__desc}>{about}</div>
+    <div>
+    <Header/>
 
-        <Footer/>
-      </div>
+    <div className={styles.wrapper}>
+        <img src={cover_image_url}/>
+        <div className={styles.wrappertitle}> {title} </div>
+        <div className={styles.wrapperdesc}> {about} </div>
+        <div className={styles.wrapperprice}> Prezzo {retail_price?.formatted_value} </div>
+        <button className={styles.wrapper__btn}>Acquista</button>
+
     </div>
-    
+
+    <Footer/>
+
+    </div>
+
+
   );
+
 }
