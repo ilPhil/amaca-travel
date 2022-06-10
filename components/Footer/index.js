@@ -24,7 +24,7 @@ const Footer = () => {
                         <li><a href="#">Visita duomo Milano</a></li>
                         <li><a href="#">Visita Museo Vaticano</a></li>
                         <li><a href="#">Visita Teatro Massimo</a></li>
-                        <li><a href="#">Visita alla Camorra</a></li>
+                        <li><a href="#">Visita Valle dei Templi</a></li>
                     </ul>
                 </div><div className="footer-col">
                     <h4>Top Città</h4>
