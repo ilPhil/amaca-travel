@@ -16,7 +16,7 @@ function MapBox({ getCities }) {
   return (
     <div className={style.map_container}>
       {/* MAP SIDE CARD */}
-      <div className={style.map_card} id={selectedLocation.id || 0}>
+      <div className={style.map_card}>
         <img
           className={style.card_poster}
           src={
@@ -27,7 +27,7 @@ function MapBox({ getCities }) {
         <div className={style.card_info}>
           <Link href={`city/${selectedLocation.uuid}` || "#"} key={selectedLocation.uuid || 0}>
             <h1 className={style.card_info_name}>
-              {selectedLocation.name || "Roma"}
+              {selectedLocation.name || "Seleziona una città"}
             </h1>
           </Link>  
           <p className={style.card_info_description}>
@@ -39,7 +39,7 @@ function MapBox({ getCities }) {
       <Map
         mapboxAccessToken={process.env.mapbox_key}
         mapStyle="mapbox://styles/mrcalavera/cl3u94ry8002b15qg5txm1t9y/draft"
-        style={{ width: "50vw", height: "50vh" }} // set map wdt hgt here
+        style={{ width: "50vw", height: "35vh" }} // set map wdt hgt here
         initialViewState={{
           longitude: -100,
           latitude: 40,

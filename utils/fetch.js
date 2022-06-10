@@ -9,6 +9,11 @@ const getCities = async (cityId=" ") => {
 const getActivities = async (activityUuid=" ") => {
     const res = await fetch(`${ACTIVITIES_URL}${activityUuid}`);
     return await res.json();
-  };
+};
+  
+const getCityActivities = async (cityId = " ") => {
+  const res = await fetch(`${CITIES_URL}${cityId}/activities`);
+  return await res.json();
+}
 
-  export {getCities, getActivities};
+  export {getCities, getActivities, getCityActivities};
