@@ -100,7 +100,7 @@ const Hero = () => {
         <div className={styles.wrapper__btnright}>
           <button id="r-button" ref={rightBtn} onClick={imgSwipe}>
             <img
-              id="r-button" 
+              id="r-button"
               className={styles.arrow}
               src="/freccia-r.ico"
               alt="Arrow Icon"

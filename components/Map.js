@@ -25,11 +25,14 @@ function MapBox({ getCities }) {
           }
         />
         <div className={style.card_info}>
-          <Link href={`city/${selectedLocation.uuid}` || "#"} key={selectedLocation.uuid || 0}>
+          <Link
+            href={`city/${selectedLocation.uuid}` || "#"}
+            key={selectedLocation.uuid || 0}
+          >
             <h1 className={style.card_info_name}>
               {selectedLocation.name || "Seleziona una città"}
             </h1>
-          </Link>  
+          </Link>
           <p className={style.card_info_description}>
             {selectedLocation.meta_description || "Scopri le attività"}
           </p>
