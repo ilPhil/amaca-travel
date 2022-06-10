@@ -5,27 +5,48 @@ import Footer from "../../components/Footer";
 import styles from "./style.module.scss";
 import Header from "../../components/Header";
 
-export default function Id() {
+export default function Id({data}) {
+
+
   const router = useRouter();
   const [activityData, setActivityData] = useState([]);
+  const [price, setPrice] = useState([])
 
   useEffect(() => {
     getActivities(router.query.id).then((act) => setActivityData(act));
   }, []);
+//   console.log(activityData)
+  useEffect(() => {
+    getActivities(router.query.id).then((price) => setPrice(price.retail_price.formatted_value))
+  }, [activityData])
 
+  
+  console.log(price)
   const { about, title, cover_image_url } = activityData;
 
-  return (
-    <div className={styles.wrapper}>
-    <Header/>
-      <div>
-        <img className={styles.wrapperimg} src={cover_image_url}></img>
-      </div>
-      <div className={styles.wrappertitle}>{title}</div>
-      <br></br>
-      <div className={styles.wrapper__desc}>{about}</div>
+  // const price = activityData.retail_price.formatted_value;
 
-      <Footer/>
+
+  return (
+    <div>
+    <Header/>
+
+    <div className={styles.wrapper}>
+
+        <img src={cover_image_url}/>
+
+        <div className={styles.wrappertitle}> {title} </div>
+
+        <div className={styles.wrapperdesc}> {about} </div>
+    <div className={styles.wrapperprice}> Prezzo {price} </div>
+        <button className={styles.wrapper__btn}>Acquista</button>
+
+        </div>
+
+    <Footer/>
+
     </div>
+
   );
+
 }
