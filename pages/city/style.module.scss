@@ -1,0 +1,13 @@
+.city_page_data{
+    display: flex;
+    flex-direction: column;
+
+    .city_page_name {
+        text-align: center;
+    }
+
+    .city_page_poster{
+        width: 100vw;
+        height: 30vh;
+    }
+}

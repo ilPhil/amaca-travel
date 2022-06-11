@@ -17,8 +17,9 @@ export default function CardItem() {
               <img className={style.poster} src={cover_image_url} />
               <div className={style.container}>
                 <h4 className={style.title}>{title.substring(0, 20)}</h4>
-                <p className={style.description}>{about.substring(0, 80)} <br/>
-                  <br/> <p className={style.info}>Per Maggiori Info.....</p>
+                <p className={style.description}>
+                  {about.substring(0, 80)} <br />
+                  <br /> <p className={style.info}>Per Maggiori Info.....</p>
                 </p>
               </div>
             </div>
