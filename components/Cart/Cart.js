@@ -1,13 +1,3 @@
-
-
-
-
-export default function Cart () {
-
-    return(
-        <>
-
-            
-        </>
-    )
+export default function Cart() {
+  return <></>;
 }
