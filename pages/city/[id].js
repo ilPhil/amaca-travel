@@ -25,10 +25,6 @@ export default function City({ activities }) {
   return (
     <div>
       <Header />
-      
-      <Link href={"/"}>
-        <a>Back</a>
-      </Link>
 
       <div className={styles.city_page_data}>
         <h1 className={styles.city_page_name}>{name}</h1>
@@ -61,20 +57,3 @@ export default function City({ activities }) {
     </div>
   );
 }
-
-// export async function getServerSideProps() {
-//     const router = useRouter();
-//     const [cityDota, setCityDota] = useState([]);
-//     useEffect(() => {
-//         getCities(router.query.id).then((data) => setCityDota(data));
-//     }, []);
-
-//     const response = await fetch(`https://api.musement.com/api/v3/cities/${cityDota.id}/activities/data`)
-//     const data = await response.json()
-
-//     return {
-//         props: {
-//             activities: data,
-//         }
-//     }
-// }
