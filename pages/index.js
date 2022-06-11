@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import { getCities } from "../utils/fetch";
 import Footer from "../components/Footer/index.js";
 
+
 export default function Home() {
   return (
     <div className={styles.container}>

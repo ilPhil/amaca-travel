@@ -4,10 +4,12 @@ import { useRouter } from "next/router";
 import Footer from "../../components/Footer";
 import styles from "./style.module.scss";
 import Header from "../../components/Header";
+import { useDispatch } from 'react-redux';
 
 export default function Id({ data }) {
   const router = useRouter();
   const [activityData, setActivityData] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getActivities(router.query.id).then((act) => setActivityData(act));
@@ -27,7 +29,7 @@ export default function Id({ data }) {
           {" "}
           Prezzo {retail_price?.formatted_value}{" "}
         </div>
-        <button className={styles.wrapper__btn}>Acquista</button>
+        <button onClick={() => dispatch(addToCart(product))} className={styles.wrapper__btn}>Acquista</button>
       </div>
 
       <Footer />
