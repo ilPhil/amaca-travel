@@ -45,7 +45,7 @@ export default function City({ activities }) {
         >
           <motion.div
             drag="x"
-            dragConstraints={{ right: 0, left: -1600}}
+            dragConstraints={{ right: 0, left: -2600}}
             className={styles.inner_carousel}
           >
             {activitiesData.data?.map(

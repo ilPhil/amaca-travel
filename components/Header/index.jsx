@@ -15,8 +15,8 @@ const Header = () => {
         </Link>
       </div>
       <div className={styles.cart}>
-        <Link href={"Cart"}>
-          <img className={styles.cart_logo} src="/cart.png" alt="cart"/>
+        <Link href={"../Cart"}>
+          <img className={styles.cart_logo} src="/cart.png" alt="cart" />
         </Link>
       </div>
     </div>

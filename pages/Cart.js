@@ -1,36 +1,30 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useRouter } from "next/dist/client/router";
 import { CartContext } from "../store/provider";
 import { useContext } from "react";
+import styles from "../styles/cart.module.scss";
 
 export default function Cart() {
-  const router = useRouter();
   const { cart, deleteActivity } = useContext(CartContext);
 
   return (
     <>
       <Header />
-      {cart.map(({title,retail_price,uuid}) => (
-      <span key={uuid}>
-        <li>{title}</li>
-        <li>{retail_price.formatted_value}</li>
-        <button
-          onClick={() => {
-            deleteActivity(uuid);
-          }}
-          
+      {cart.map(({ title, retail_price, uuid }) => (
+        <span key={uuid} className={styles.cart_container}>
+          <div className={styles.cart_title}>{title}</div>
+          <div className={styles.cart_price}>{retail_price.formatted_value}</div>
+          <button
+            className={styles.cart_button}
+            onClick={() => {
+              deleteActivity(uuid);
+            }}
           >
-          Rimuovi
-        </button>
-      </span>
+            Rimuovi
+          </button>
+        </span>
+      ))}
 
-      )
-          
-
-      )}
-
-    
       <Footer />
     </>
   );
