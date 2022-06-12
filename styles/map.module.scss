@@ -6,8 +6,8 @@
   .map_card {
     display: flex;
     flex-direction: column;
-    max-width: 10vw;
-    max-height: 40vh;
+    max-width: 20vw;
+    max-height: 50vh;
     overflow: auto;
     border-radius: 20px 0 0 20px;
     background-color: rgb(184, 242, 242);
@@ -20,7 +20,7 @@
 
     .card_info {
       text-align: center;
-      font-size: 1vw;
+      font-size: 2vh;
 
       .card_info_name {
         cursor: pointer;

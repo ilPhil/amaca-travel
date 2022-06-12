@@ -1,31 +1,50 @@
-import style from "./index.module.scss";
 import { getActivities } from "../../utils/fetch";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-export default function CardItem() {
+import { motion } from "framer-motion";
+import style from "./index.module.scss";
+
+export default function Slide() {
   const [activity, setActivity] = useState([]);
+  const carousel = useRef();
+
   useEffect(() => {
     getActivities().then((act) => setActivity(act.data));
   }, []);
 
   return (
-    <div className={style.cardsWrapper}>
-      {activity?.map(({ uuid, cover_image_url, title, about }) => (
-        <Link href={`activity/${uuid}`} key={uuid}>
-          <div className={style.card}>
-            <div>
-              <img className={style.poster} src={cover_image_url} />
-              <div className={style.container}>
-                <h4 className={style.title}>{title.substring(0, 20)}</h4>
-                <p className={style.description}>
-                  {about.substring(0, 80)} <br />
-                  <br /> <p className={style.info}>Per Maggiori Info.....</p>
-                </p>
+    <div className={style.bigbox}>
+      <motion.div
+        ref={carousel}
+        className={style.carousel}
+        whileTap={{ cursor: "grabbing" }}
+      >
+        <motion.div
+          drag="x"
+          dragConstraints={{ right: 0, left: -1600 }}
+          className={style.inner_carousel}
+        >
+          {activity.map(({ uuid, cover_image_url, title, about }) => (
+            <motion.div className={style.item} key={uuid}>
+              <div className={style.card}>
+                <div>
+                  <img className={style.poster} src={cover_image_url} />
+                  <div className={style.container}>
+                    <h4 className={style.title}>{title.substring(0, 25)}</h4>
+
+                    <p className={style.description}>
+                      {about.substring(0, 60)+"..."}
+                      <Link href={`activity/${uuid}`} key={uuid}>
+                        <p className={style.info}>Per Maggiori Info.....</p>
+                      </Link>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Link>
-      ))}
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
