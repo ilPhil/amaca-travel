@@ -10,7 +10,7 @@ const Header = () => {
             <a>🏠</a>
           </Link>
           <div></div>
-          <Link href={"Cart"}>
+          <Link href={"/Cart"}>
             <a>🛒</a>
           </Link>
         </span>
