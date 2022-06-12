@@ -11,21 +11,27 @@ export default function Cart() {
     <>
       <Header />
       {cart.map(({ title, retail_price, uuid }) => (
-        <span key={uuid} className={styles.cart_container}>
-          <div className={styles.cart_title}>{title}</div>
-          <div className={styles.cart_price}>{retail_price.formatted_value}</div>
-          <button
-            className={styles.cart_button}
-            onClick={() => {
-              deleteActivity(uuid);
-            }}
-          >
-            Rimuovi
-          </button>
-        </span>
+        <div key={uuid} className={styles.cart_box}>
+          <div className={styles.cart_card}>
+            <div className={styles.cart_title}> {title} </div>
+            <div className={styles.cart_price}>
+              {" "}
+              {retail_price.formatted_value}{" "}
+            </div>
+            <div className={styles.button_box}>
+              <button
+                className={styles.cart_button}
+                onClick={() => {
+                  deleteActivity(uuid);
+                }}
+              >
+                Rimuovi
+              </button>
+            </div>
+          </div>
+          
+        </div>
       ))}
-
-      <Footer />
     </>
   );
 }
