@@ -13,7 +13,7 @@ export default function Slide() {
   }, []);
 
   return (
-    <div className={style.bigbox}>
+    <div>
       <motion.div
         ref={carousel}
         className={style.carousel}
@@ -33,7 +33,7 @@ export default function Slide() {
                     <h4 className={style.title}>{title.substring(0, 25)}</h4>
 
                     <p className={style.description}>
-                      {about.substring(0, 60)+"..."}
+                      {about.substring(0, 60) + "..."}
                       <Link href={`activity/${uuid}`} key={uuid}>
                         <p className={style.info}>Per Maggiori Info.....</p>
                       </Link>

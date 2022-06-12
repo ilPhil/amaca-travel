@@ -1,29 +1,42 @@
 .box {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: white;
-  flex-wrap: wrap;
   align-content: stretch;
   align-items: center;
 }
 
+.amaca_travel {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-left: 2vw;
+}
+
 .amaca_logo {
-  max-width: 5vw;
+  max-height: 7vh;
+  cursor: pointer;
+
+  &.amaca_logo:hover {
+    transform: scale(1.3);
+  }
+}
+
+.cart_logo {
   max-height: 5vh;
   cursor: pointer;
+  margin-right: 1vw;
+
+  &.cart_logo:hover {
+    transform: scale(1.3);
+  }
 }
 
 .text {
-  font-size: 30px;
-  color: black;
-  width: 230px;
-  text-align: center;
+  font-size: 3vw;
+  font-style: italic;
+  color: rgb(84, 145, 22);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-.links {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  font-size: 20px;
-  padding: 10px;
-}
