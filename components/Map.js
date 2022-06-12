@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Map, GeolocateControl, Marker } from "react-map-gl";
+import { Map, GeolocateControl, Marker, NavigationControl } from "react-map-gl";
 import Link from "next/link";
 
 import style from "../styles/map.module.scss";
@@ -63,7 +63,8 @@ function MapBox({ getCities }) {
             />
           </Marker>
         ))}
-        <GeolocateControl />
+        <NavigationControl/>
+           <GeolocateControl />
       </Map>
     </div>
   );

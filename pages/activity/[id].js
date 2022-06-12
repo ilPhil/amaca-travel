@@ -5,7 +5,6 @@ import Footer from "../../components/Footer";
 import styles from "./style.module.scss";
 import Header from "../../components/Header";
 import { CartContext } from "../../store/provider";
-// import { Item } from "framer-motion/types/components/Reorder/Item";
 
 export default function Id({ data }) {
   const router = useRouter();
@@ -15,13 +14,15 @@ export default function Id({ data }) {
     getActivities(router.query.id).then((act) => setActivityData(act));
   }, [router]);
 
-  const { about, title, cover_image_url, retail_price } = activityData;
-  const { cart, addActivity} = useContext(CartContext);
-console.log(cart)
+  const { about, title, cover_image_url, retail_price, city } = activityData;
+  const { addActivity} = useContext(CartContext);
   return (
+
     <div className={styles.background}>
       <Header />
-      <div className={styles.wrapper}>
+        <div className={styles.wrapper}>
+        <div className={styles.wrapper__title}>{city?.name}</div>
+
         <div className={styles.wrapper__title}> {title} </div>
         <img className={styles.wrapper__img} src={cover_image_url} />
       </div>

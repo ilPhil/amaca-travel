@@ -45,10 +45,16 @@
 
   button {
     width: 3vw;
-    height: 4vh;
+    height: 6vh;
     background: rgba($color: #ffffff, $alpha: 0.3);
     cursor: pointer;
     border-radius: 30px;
+    font-size: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
   }
 
   .fade {
