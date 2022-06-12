@@ -35,12 +35,18 @@ export default function City({ activities }) {
         <div className={styles.paperino_wrapper}>
           {activitiesData.data?.map(
             ({ cover_image_url, uuid, title, about }) => (
-              <div className={styles.activity_container}>
+              <div key={uuid} className={styles.activity_container}>
                 <Link href={`../activity/${uuid}`} key={uuid}>
                   <a>
-                    <img className={styles.activity_poster} src={cover_image_url} alt={"Activity picture"} />
+                    <img
+                      className={styles.activity_poster}
+                      src={cover_image_url}
+                      alt={"Activity picture"}
+                    />
                     <div>
-                      <h4 className={styles.activity_title}>{title.substring(0, 20)}</h4>
+                      <h4 className={styles.activity_title}>
+                        {title.substring(0, 20)}
+                      </h4>
                       <p className={styles.activity_about}>
                         {about.substring(0, 80)} <br />
                         <br /> <p>Per Maggiori Info.....</p>
