@@ -42,7 +42,7 @@ function MapBox({ getCities }) {
       <Map
         mapboxAccessToken={process.env.mapbox_key}
         mapStyle="mapbox://styles/mrcalavera/cl3u94ry8002b15qg5txm1t9y/draft"
-        style={{ width: "50vw", height: "40vh" }} // set map wdt hgt here
+        style={{ width: "50vw", height: "50vh" }} // set map wdt hgt here
         initialViewState={{
           longitude: -100,
           latitude: 40,

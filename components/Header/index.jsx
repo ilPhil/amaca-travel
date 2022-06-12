@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.box}>
-        <h1 className={styles.text}>Pixel Travel</h1>
+        <h1 className={styles.text}>Amaca Travel</h1>
         <span className={styles.links}>
           <Link href={"/"}>
             <a>🏠</a>

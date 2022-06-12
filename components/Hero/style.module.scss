@@ -43,18 +43,12 @@
     z-index: 1;
   }
 
-  .arrow {
-    cursor: pointer;
-    width: 7vw;
-    height: 7vh;
-    border: transparent;
-  }
-
   button {
-    width: 10vw;
-    height: 20vh;
+    width: 3vw;
+    height: 4vh;
     background: rgba($color: #ffffff, $alpha: 0.3);
     cursor: pointer;
+    border-radius: 30px;
   }
 
   .fade {

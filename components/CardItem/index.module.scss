@@ -1,8 +1,18 @@
+
+.carousel {
+  cursor: grab;
+overflow-y: visible;}
+
+.inner_carousel {
+  display: flex;
+  gap:2vw;
+}
+
 .cardsWrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10vw;
   cursor: pointer;
 }
 
@@ -11,7 +21,12 @@
   display: flex;
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 40px 40px 40px 0;
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 170px;
   transition: 0.3s;
+  align-items: stretch;
 
   &__.description {
     font-size: 5vw;
@@ -20,10 +35,20 @@
 
 .poster {
   width: 100%;
+  min-width: 270px;
+  max-width: 270px;
+  min-height: 170px;
+  max-height: 170px;
+  object-fit: cover;
+
+  border-radius: 40px 40px 0px 0px;
 }
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  box-shadow: rgba(22, 201, 232, 0.4) 0px 5px, rgba(46, 237, 240, 0.3) 0px 10px, rgba(46, 208, 240, 0.2) 0px 15px, rgba(53, 46, 240, 0.1) 0px 20px, rgba(111, 46, 240, 0.05) 0px 25px;
+  
 }
 
 /* Add some padding inside the card container */
@@ -32,5 +57,12 @@
 }
 
 .info {
-  color: rgb(89, 184, 137);
-}
+   //color: rgb(89, 184, 137);
+   color: rgb(29, 138, 240);
+   cursor: pointer;
+   font-weight: 700;
+   font-size: .9rem;
+   padding: 15px;
+   overflow: hidden;
+ 
+ }

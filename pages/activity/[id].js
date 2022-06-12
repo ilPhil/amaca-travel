@@ -5,7 +5,8 @@ import Footer from "../../components/Footer";
 import styles from "./style.module.scss";
 import Header from "../../components/Header";
 
-export default function Id({ data }) {
+export default function Id({data}) {
+
   const router = useRouter();
   const [activityData, setActivityData] = useState([]);
 
@@ -13,24 +14,33 @@ export default function Id({ data }) {
     getActivities(router.query.id).then((act) => setActivityData(act));
   }, [router]);
 
-  const { about, title, cover_image_url, retail_price } = activityData;
+  const { about, title, cover_image_url, retail_price  } = activityData;
 
   return (
-    <div>
-      <Header />
+    <div className={styles.background}>
+    <Header/>
 
-      <div className={styles.wrapper}>
-        <img src={cover_image_url} />
-        <div className={styles.wrappertitle}> {title} </div>
-        <div className={styles.wrapperdesc}> {about} </div>
-        <div className={styles.wrapperprice}>
-          {" "}
-          Prezzo {retail_price?.formatted_value}{" "}
+        <div className={styles.wrapper}>
+            <div className={styles.wrapper__title}> {title} </div>
+            <img className={styles.wrapper__img} src={cover_image_url}/>
         </div>
-        <button className={styles.wrapper__btn}>Acquista</button>
-      </div>
 
-      <Footer />
+        <div className={styles.container}>
+            <div className={styles.container__about}> {about} </div>
+          
+            <div className={styles.container__price}>
+            <div> Prezzo {retail_price?.formatted_value} </div>
+            </div>
+        
+            <button className={styles.container__btn}>Acquista</button>
+        </div>
+
+
+    <Footer/>
+
     </div>
+
+
   );
+
 }
