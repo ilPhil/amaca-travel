@@ -16,8 +16,8 @@ export default function Id({ data }) {
   }, [router]);
 
   const { about, title, cover_image_url, retail_price } = activityData;
-  const { cart, addActivity, deleteActivity } = useContext(CartContext);
-
+  const { cart, addActivity} = useContext(CartContext);
+console.log(cart)
   return (
     <div className={styles.background}>
       <Header />
@@ -36,14 +36,7 @@ export default function Id({ data }) {
         >
           Acquista
         </button>
-        <button
-          onClick={() => {
-            deleteActivity(activityData.uuid);
-          }}
-          className={styles.container__btn}
-        >
-          Rimuovi
-        </button>
+        
       </div>
       <Footer />
     </div>

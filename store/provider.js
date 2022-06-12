@@ -16,6 +16,7 @@ export const Provider = ({ children }) => {
   };
 
   const deleteActivity = (uuid) => {
+    
     return setCart(cart.filter((activity) => activity.uuid !== uuid));
   };
 
