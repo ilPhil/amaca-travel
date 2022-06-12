@@ -1,11 +1,13 @@
-
 .carousel {
   cursor: grab;
-overflow-y: visible;}
+  overflow: hidden;
+}
 
 .inner_carousel {
   display: flex;
-  gap:2vw;
+  gap: 2.5vw;
+  padding-top: 25px;
+  padding-bottom: 35px;
 }
 
 .cardsWrapper {
@@ -47,8 +49,9 @@ overflow-y: visible;}
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   transform: scale(1.1);
-  box-shadow: rgba(22, 201, 232, 0.4) 0px 5px, rgba(46, 237, 240, 0.3) 0px 10px, rgba(46, 208, 240, 0.2) 0px 15px, rgba(53, 46, 240, 0.1) 0px 20px, rgba(111, 46, 240, 0.05) 0px 25px;
-  
+  box-shadow: rgba(22, 201, 232, 0.4) 0px 5px, rgba(46, 237, 240, 0.3) 0px 10px,
+    rgba(46, 208, 240, 0.2) 0px 15px, rgba(53, 46, 240, 0.1) 0px 20px,
+    rgba(111, 46, 240, 0.05) 0px 25px;
 }
 
 /* Add some padding inside the card container */
@@ -57,12 +60,11 @@ overflow-y: visible;}
 }
 
 .info {
-   //color: rgb(89, 184, 137);
-   color: rgb(29, 138, 240);
-   cursor: pointer;
-   font-weight: 700;
-   font-size: .9rem;
-   padding: 15px;
-   overflow: hidden;
- 
- }
+  //color: rgb(89, 184, 137);
+  color: rgb(29, 138, 240);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 15px;
+  overflow: hidden;
+}

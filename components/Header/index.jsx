@@ -7,9 +7,8 @@ const Header = () => {
         <h1 className={styles.text}>Amaca Travel</h1>
         <span className={styles.links}>
           <Link href={"/"}>
-            <a>🏠</a>
+            <img className={styles.amaca_logo} src="/amaca400x400.png" alt="logo" />
           </Link>
-          <div></div>
           <Link href={"Cart"}>
             <a>🛒</a>
           </Link>
