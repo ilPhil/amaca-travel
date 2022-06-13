@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+<img width="200" src="https://user-images.githubusercontent.com/101338911/173311521-ae13d7c8-6ae5-4433-b1c3-4dedf45a18e8.png"> 
+</p>
 
-## Getting Started
+***
 
-First, run the development server:
+<h1 align="center">Amaca Travel</h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+***
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2 align="center">TOOLS</>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+***
+  
+  <h4 align="center">Next.Js</h4>
+  <h4 align="center">CSS</h4>
+  <h4 align="center">SCSS</h4>
+  <h4 align="center">Mapbox</h4>
+  <h4 align="center">React Map GL</h4>
+  <h4 align="center">Framer Motion</h4>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+***
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h2 align="center">Made by us</h2>
 
-## Learn More
+***
 
-To learn more about Next.js, take a look at the following resources:
+<p  align="center"><a align="center" href="https://www.linkedin.com/in/trovatoantonello/">Antonello Trovato</a></p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p  align="center"><a align="center" href="https://www.linkedin.com/in/marco-terrana-76a12919b/">Marco Terrana</a></p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p  align="center"><a align="center" href="https://www.linkedin.com/in/alessandro-la-greca-336278239/">Alessandro La Greca</a></p>
 
-## Deploy on Vercel
+<p  align="center"><a align="center" href="https://www.linkedin.com/in/christian-esposito-developer/">Christian Esposito</a></p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<p  align="center"><a href="https://www.linkedin.com/in/alessandro-guercio-cygnus-x1/">Alessandro Guercio</a></p>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+<h2 align="center"> Special Thanks to our Project Manager </h2>
+
+---
+
+<h3 align="center"> Stefano Russo </h3>
